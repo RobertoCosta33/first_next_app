@@ -1,6 +1,6 @@
-import Link from "../src/components/Link";
-import Head from "next/head";
-import PageTitle from "../src/components/PageTitle";
+import FAQScreen from '../src/screens/FAQScreen/FAQscreen';
+
+export default FAQScreen;
 
 export async function getStaticProps(context) {
   const FAQ_API_URL =
@@ -21,30 +21,30 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function Faq({ faq }) {
-  console.log(faq);
-  // const [faq, setFaq] = useState([]);
-  // setFaq(dataFaq);
-  // useEffect(() => {}, []);
+// export default function Faq({ faq }) {
+//   console.log(faq);
+//   // const [faq, setFaq] = useState([]);
+//   // setFaq(dataFaq);
+//   // useEffect(() => {}, []);
 
-  return (
-    <div>
-       <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
-      <Link href="/" passHref>
-        Ir Para Home Page
-      </Link>
-      <ul>
-        {faq.map(({ question, answer, index }) => {
-          return (
-            <li key={index}>
-              <article>
-                <h2>{question}</h2>
-                <p>{answer}</p>
-              </article>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//        <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
+//       <Link href="/" passHref>
+//         Ir Para Home Page
+//       </Link>
+//       <ul>
+//         {faq.map(({ question, answer, index }) => {
+//           return (
+//             <li key={index}>
+//               <article>
+//                 <h2>{question}</h2>
+//                 <p>{answer}</p>
+//               </article>
+//             </li>
+//           );
+//         })}
+//       </ul>
+//     </div>
+//   );
+// }
